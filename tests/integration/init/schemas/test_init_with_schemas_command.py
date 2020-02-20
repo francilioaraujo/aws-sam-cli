@@ -235,7 +235,9 @@ N
             result = runner.invoke(init_cmd, ["--output-dir", temp], input=user_input)
 
             print("#########################")
-            print(result.stdout[len(result.stdout) - 400:])
+            print(result.stdout)
+            print("#########################")
+            print(result.stderr)
             print("#########################")
 
             self.assertFalse(result.exception)

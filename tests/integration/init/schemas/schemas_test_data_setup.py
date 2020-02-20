@@ -80,7 +80,7 @@ Y
             profile,
             session.get_credentials().access_key,
             session.get_credentials().secret_key,
-            session.get_credentials().token,
+            session.get_credentials().token
         )
 
         env[AWS_CONFIG_FILE] = custom_config
