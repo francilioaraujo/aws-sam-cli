@@ -237,9 +237,6 @@ N
             print("#########################")
             print(result.stdout)
             print("#########################")
-            print(result.output)
-            print("#########################")
-
 
             self.assertFalse(result.exception)
             expected_output_folder = Path(temp, "eb-app-python37")
