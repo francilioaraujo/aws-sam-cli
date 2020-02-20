@@ -234,6 +234,12 @@ N
             runner = CliRunner()
             result = runner.invoke(init_cmd, ["--output-dir", temp], input=user_input)
 
+            print("###################3")
+            print(result.stdout)
+            print("###################3")
+            print(result.output)
+            print("###################3")
+
             self.assertFalse(result.exception)
             expected_output_folder = Path(temp, "eb-app-python37")
             self.assertTrue(expected_output_folder.exists)

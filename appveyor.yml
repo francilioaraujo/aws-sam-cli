@@ -121,9 +121,9 @@ for:
       - "pip install -e \".[dev]\""
 
     test_script:
-      - "pytest --cov samcli --cov-report term-missing --cov-fail-under 95 tests/unit"
-      - "pylint --rcfile .pylintrc samcli"
-      - "pytest -n 4 tests/functional"
+#      - "pytest --cov samcli --cov-report term-missing --cov-fail-under 95 tests/unit"
+#      - "pylint --rcfile .pylintrc samcli"
+#      - "pytest -n 4 tests/functional"
 
       # Runs only in Linux
 #      - sh: "pytest -vv tests/integration/buildcmd"
