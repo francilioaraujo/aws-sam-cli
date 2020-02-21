@@ -240,6 +240,7 @@ N
             print(result.stderr)
             print("#########################")
 
+            from remote_pdb import RemotePdb; RemotePdb('127.0.0.1', 4444).set_trace()
             self.assertFalse(result.exception)
             expected_output_folder = Path(temp, "eb-app-python37")
             self.assertTrue(expected_output_folder.exists)
