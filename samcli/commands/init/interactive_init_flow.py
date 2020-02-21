@@ -57,7 +57,7 @@ def _generate_from_app_template(location, runtime, dependency_manager, output_di
     dependency_manager = _get_dependency_manager(dependency_manager, runtime)
     if not name:
         name = click.prompt("\nProject name", type=str, default="sam-app")
-    # from remote_pdb import RemotePdb; RemotePdb('127.0.0.1', 4444).set_trace()
+    from remote_pdb import RemotePdb; RemotePdb('127.0.0.1', 4444).set_trace()
     templates = InitTemplates()
     if app_template is not None:
         location = templates.location_from_app_template(runtime, dependency_manager, app_template)
