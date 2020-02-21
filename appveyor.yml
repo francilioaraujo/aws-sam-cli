@@ -129,7 +129,7 @@ for:
       # Runs only in Linux
 #      - sh: "pytest -vv tests/integration/buildcmd"
 #      - sh: "pytest -vv tests/integration/deploy"
-      - sh: "pytest -vv tests/integration/init/schemas"
+      - sh: "pytest -vv tests/integration/init/schemas -k 'test_init_interactive_with_event_bridge_app_aws_registry'"
 #      - sh: "pytest -vv tests/integration/local/generate_event"
 #      - sh: "pytest -vv tests/integration/local/invoke"
 #      - sh: "pytest -vv tests/integration/local/start_api"
