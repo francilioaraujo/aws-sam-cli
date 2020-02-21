@@ -38,7 +38,6 @@ class InitTemplates:
         self._auto_clone = auto_clone
 
     def prompt_for_location(self, runtime, dependency_manager):
-        from remote_pdb import RemotePdb; RemotePdb('127.0.0.1', 4444).set_trace()
         options = self.init_options(runtime, dependency_manager)
         if len(options) == 1:
             template_md = options[0]
@@ -126,6 +125,7 @@ class InitTemplates:
             return False
 
     def _clone_repo(self):
+        from remote_pdb import RemotePdb; RemotePdb('127.0.0.1', 4444).set_trace()
         if not self._auto_clone:
             return  # Unit test escape hatch
         # check if we have templates stored already
