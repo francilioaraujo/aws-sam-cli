@@ -39,7 +39,6 @@ Y
         with tempfile.TemporaryDirectory() as temp:
             runner = CliRunner()
             result = runner.invoke(init_cmd, ["--output-dir", temp], input=user_input)
-            from remote_pdb import RemotePdb;RemotePdb('127.0.0.1', 4444).set_trace()
 
             self.assertFalse(result.exception)
             expected_output_folder = Path(temp, "eb-app-maven")
@@ -241,7 +240,6 @@ N
             print(result.stderr)
             print("#########################")
 
-            from remote_pdb import RemotePdb; RemotePdb('127.0.0.1', 4444).set_trace()
             self.assertFalse(result.exception)
             expected_output_folder = Path(temp, "eb-app-python37")
             self.assertTrue(expected_output_folder.exists)
